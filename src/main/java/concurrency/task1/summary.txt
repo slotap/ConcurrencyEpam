@@ -1,0 +1,13 @@
+Concurrent HashMap
+It is a thread-safe implementation of the Map interface, Due to the fact that each bucket can be locked independently, the performance is better than the other solutions
+Multiple Threads can modify ConcurrentHashMap at the same time.
+Disadvantages : not allowed to use null as a key or value
+
+Collections.synchronizedMap
+Provide thread safe operations.
+Since at a given time only a single Thread can modify the map and block other threads the performance is worse than ConcurrentHashMap
+Handling null key/values depend on the input Map.
+
+CustomMap
+Methods inside CustomMap are not thread safe, however operations used in this example are thread safe because of the use of synchronised block which are locking
+Map object from accesing it with another thread
